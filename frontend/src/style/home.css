@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+.background-image  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.fluid {
+    width: 100%;     
+    height: auto;
+    display: block; 
+    object-fit: cover;       
+}
+
+.homepage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-top: 20%;
+    font-family: "Anton", sans-serif;
+    color: white;
+}
+
+.content p {
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 800;
+    color: white;
+}
+.about-button{
+    margin-top: 15px; 
+    padding: 15px 27px; 
+    font-size: 1.2rem; 
+    color: #fff; 
+    background-color: #333; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    font-family:"Josefin Sans", sans-serif;
+}
+.about-button:hover{
+    background-color: white; 
+    color: #333;
+    scale: 1.1;
+    
+}
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2rem; 
+        padding-top: 18%;
+    }
+
+    .content p {
+        font-size: 1.3rem; 
+        color: #333;
+    }
+    .fluid{
+        height: 100%;
+    }
+    .about-button{
+        padding: 3% 5%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 1.5rem; 
+        padding-top: 8%;
+    }
+
+    .content p {
+        font-size: 1rem; 
+    }
+
+    .fluid{
+        height: 100%;
+    }
+    .about-button{
+        padding: 3% 5%;
+    }
+    
+}

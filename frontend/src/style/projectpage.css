@@ -1,0 +1,227 @@
+.projects-page-container{
+    background-color: white;
+    color: black;
+}
+.container-projects {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.fluidproject {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.top-half {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading-projects {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.heading-projects h1 {
+    font-size: 2.5rem;
+    padding-top: 5%;
+    font-family: "Anton", sans-serif;
+    color: #333;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.fluidproject2 {
+    width: 40%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 3%;
+    margin-top: 10%;
+    padding-left: 5%;
+}
+
+.main-content {
+    width: 50%;
+    margin-top: 10%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-family: "Josefin Sans", sans-serif;
+    color: #495057;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.project-card {
+    width: 30%; 
+    margin: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+    text-align: left; 
+}
+
+.project-card h3 {
+    margin: 0; 
+}
+.project-card p{
+    margin: 0; 
+    color: #495057;
+}
+
+.project-card img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+}
+
+
+.project-button {
+    margin-top: 15px; 
+    padding: 12px 15px; 
+    font-size: 1rem; 
+    color: #fff; 
+    background-color: #333; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    font-family:"Josefin Sans", sans-serif;
+}
+
+.project-button:hover {
+    background-color: white; 
+    color: #333;
+    scale: 1.1;
+}
+.projects-list-heading{
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    color: #333;
+    padding: 7% 0%;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; 
+    width: 90%; 
+    text-align: left;
+    position: relative; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer; 
+}
+
+.modal-content img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+.close-button {
+    position: absolute;
+    top: 10px; /* Position the button at the top */
+    right: 10px; /* Align it to the right side */
+    border: none; /* Remove button border */
+    background: none; /* Remove background */
+    font-size: 1.5rem; /* Font size for the button */
+    cursor: pointer; /* Change cursor to pointer */
+    color: #333; /* Color for the close button */
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 45%; 
+    }
+
+    .fluidproject2, .main-content {
+        width: 100%; 
+        padding-left: 0;
+    }
+
+    .main-content {
+        margin-top: 20px; 
+    }
+
+    .heading-projects {
+        font-size: 1.5rem;
+    }
+
+    .heading-projects h1 {
+        font-size: 2rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .heading-projects {
+        font-size: 1.2rem; 
+    }
+
+    .heading-projects h1 {
+        font-size: 1.5rem; 
+    }
+
+    .fluidproject2 {
+        height: 200px; 
+    }
+
+    .main-content {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        width: 100%; 
+    }
+}
