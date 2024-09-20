@@ -25,7 +25,7 @@ const RegisterLogin = ({ onClose }) => {
       if (isRegister) {
         // Registration logic
       } else {
-        const loginResponse = await fetch(`http://localhost:3000/api/login/`, {
+        const loginResponse = await fetch(`https://seversidegandy.onrender.com/api/login/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
