@@ -26,7 +26,7 @@ function AddProjects() {
         formData.append('photo', photo);
 
         try {
-            await axios.post('http://localhost:3000/api/postproject', formData, {
+            await axios.post('https://seversidegandy.onrender.com/api/postproject', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -57,7 +57,7 @@ function AddProjects() {
 
     const fetchProjects = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/api/projects');
+            const response = await axios.get('https://seversidegandy.onrender.com/api/projects');
             setProjects(response.data);
         } catch (error) {
             console.error('Error fetching projects:', error);
@@ -121,7 +121,7 @@ function AddProjects() {
                         <div key={index} className="store-card">
                             {project.photo ? (
                                 <img
-                                    src={`http://localhost:3000/images/${project.photo}`}
+                                    src={`https://seversidegandy.onrender.com/images/${project.photo}`}
                                     alt={project.title}
                                 />
                             ) : (
