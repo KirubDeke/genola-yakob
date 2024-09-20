@@ -27,7 +27,7 @@ const DashboardAuthor = () => {
 
   const fetchUserData = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/UserNameAndRole/${userId}`);
+      const response = await fetch(`https://genola-yakobbackend.onrender.com/api/UserNameAndRole/${userId}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
