@@ -26,7 +26,7 @@ function AddProjects() {
         formData.append('photo', photo);
 
         try {
-            await axios.post('https://genola-yakobbackend.onrender.com/api/postproject', formData, {
+            await axios.post('http://localhost:3000/api/postproject', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -47,7 +47,7 @@ function AddProjects() {
     const handleDeleteProject = async (id) => {
         try {
             if (window.confirm('Are you sure you want to delete this project?')) {
-                await axios.delete(`https://genola-yakobbackend.onrender.com/api/deleteProject/${id}`);
+                await axios.delete(`http://localhost:3000/api/deleteProject/${id}`);
                 setProjects(projects.filter((project) => project._id !== id));
             }
         } catch (error) {
@@ -57,7 +57,7 @@ function AddProjects() {
 
     const fetchProjects = async () => {
         try {
-            const response = await axios.get('https://genola-yakobbackend.onrender.com/api/projects');
+            const response = await axios.get('http://localhost:3000/api/projects');
             setProjects(response.data);
         } catch (error) {
             console.error('Error fetching projects:', error);
@@ -121,7 +121,7 @@ function AddProjects() {
                         <div key={index} className="store-card">
                             {project.photo ? (
                                 <img
-                                    src={`https://genola-yakobbackend.onrender.com/images/${project.photo}`}
+                                    src={`http://localhost:3000/images/${project.photo}`}
                                     alt={project.title}
                                 />
                             ) : (
