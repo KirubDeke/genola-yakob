@@ -13,7 +13,7 @@ function ProjectPage() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/projects');
+                const response = await axios.get('https://genola-yakobbackend.onrender.com/api/projects');
                 setProjects(response.data);
             } catch (error) {
                 console.error('Error fetching projects:', error);
@@ -57,7 +57,7 @@ function ProjectPage() {
                     {projects.map((project, index) => (
                         <div key={index} className='project-card'>
                             {project.photo ? (
-                                <img src={`http://localhost:3000/images/${project.photo}`} alt={project.title} />
+                                <img src={`https://genola-yakobbackend.onrender.com/images/${project.photo}`} alt={project.title} />
                             ) : (
                                 <p>No image available</p>
                             )}
@@ -77,7 +77,7 @@ function ProjectPage() {
                             <>
                                 <h2>{selectedProject.title}</h2>
                                 {selectedProject.photo && (
-                                    <img src={`http://localhost:3000/images/${selectedProject.photo}`} alt={selectedProject.title} />
+                                    <img src={`https://genola-yakobbackend.onrender.com/images/${selectedProject.photo}`} alt={selectedProject.title} />
                                 )}
                                 <p>{selectedProject.description}</p>
                             </>
